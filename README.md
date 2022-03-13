@@ -1,6 +1,6 @@
 # MWTest
 
-Learning More abot Middleware, and make some own for test :
+Learning More about Middlewares, and make some own for test :
 
 - Page Counter middleware
 - Write access site log for analytics
