@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
+    path('error/',views.noMore,name='nomore')
 
 ]

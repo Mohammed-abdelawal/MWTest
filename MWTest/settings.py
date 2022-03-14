@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-jj+m(d4!^uv*-hxvb^x0s9z@m2yp&ka@gm9yj=g2qmr!lm3&=*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.24','0.0.0.0','127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'core.middleware.LimitedRequestMiddleware',
+    'core.middleware.EveryPageCounterMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'core.middleware.SiteVisitsCounterMiddleware',
 ]
 
 ROOT_URLCONF = 'MWTest.urls'
